@@ -1,0 +1,301 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Brick property
+    meta(name='description', content='')
+    meta(name='twitter:title', content='')
+    meta(name='twitter:description', content='')
+    // Open Graph / Facebook
+    meta(property='og:title', content='Title of the project')
+    meta(property='og:description', content='')
+    meta(property='og:type', content='website')
+    meta(property='og:url', content='https://github.com/PaulleDemon')
+    // Replace with the current website url
+    meta(property='og:image', content='')
+    link(rel='shortcut icon', href='./assets/logo.png', type='image/x-icon')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap')
+    link(rel='stylesheet', href='../public/stylesheets/tailwind-runtime.css')
+    link(rel='stylesheet', href='./css/tailwind-build.css')
+    link(rel='stylesheet', href='./css/index.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css', integrity='sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==', crossorigin='anonymous', referrerpolicy='no-referrer')
+  body.tw-flex.tw-w-full.tw-flex-col(class='tw-min-h-[100vh] tw-bg-[#ffffff]')
+    header.tw-fixed.tw-top-0.tw-z-20.tw-flex.tw-w-full(class='tw-h-[60px] tw-px-[10%] max-lg:tw-mr-auto lg:tw-justify-around')
+      #expanding-header-bg.tw-absolute.tw-left-0.tw-top-0.tw-h-0.tw-w-full.tw-bg-white.tw-shadow-md(class='tw-z-[-1]')
+        // expands the white background as scroll
+      .tw-flex.tw-w-max.tw-place-items-center.tw-gap-3
+        //
+          <img src="./assets/public accountant.jpg"
+          alt="Stroemer logo" class="tw-w-full tw-h-full tw-object">
+        //- .(class='tw-h-[50px] tw-w-[50px] tw-p-[4px]')
+          img.tw-object.tw-h-full.tw-w-full(src='./assets/logo.png', alt='logo')
+      #collapsed-items.collapsible-header.animated-collapse
+        .tw-flex.tw-h-full.tw-w-max.tw-gap-5.tw-text-base.tw-text-white(class='max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-place-items-end max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center')
+          a.header-links(href='')  About us 
+          a.header-links(href='')  Team 
+          a.header-links(href='')  Projects 
+          a.header-links(href='#booking')  Contact us 
+        .tw-flex.tw-place-items-center.tw-text-xl(class='tw-gap-[20px] max-lg:tw-w-full max-lg:tw-place-content-center max-lg:!tw-text-white')
+          a.header-links.tw-transition-colors(href='https://www.instagram.com/', target='_blank', rel='no-referrer', area-label='instagram', class='tw-duration-[0.3s]')
+            i.bi.bi-instagram
+          a.header-links.tw-transition-colors(href='https://twitter.com/pauls_freeman', target='_blank', rel='no-referrer', area-label='twitter', class='tw-duration-[0.3s]')
+            i.bi.bi-twitter
+          a.header-links.tw-transition-colors(href='https://www.facebook.com/', target='_blank', rel='no-referrer', area-label='facebook', class='tw-duration-[0.3s]')
+            i.bi.bi-facebook
+      button#collapse-btn.bi.bi-list.tw-absolute.tw-right-3.tw-top-3.tw-z-50.tw-text-3xl(class='lg:tw-hidden', onclick='toggleHeader()', aria-label='menu')
+        // <i class="bi bi-list"></i>
+    section#hero-section.tw-relative.tw-flex.tw-w-full.tw-flex-col.tw-overflow-hidden(class='tw-h-[100vh] tw-max-w-[100vw] max-lg:tw-h-[100dvh]')
+      img#hero-image.tw-h-full.tw-w-full.tw-object-cover(src='./assets/images/homepage/hero-image.jpg', alt='', class='tw-scale-[1.3]')
+      .overlay-gradient.tw-absolute.tw-top-0.tw-h-full.tw-w-full(class='max-lg:tw-z-[2] max-lg:!tw-bg-[#1c1c1ca2]')
+      //
+        <div class="tw-absolute tw-bottom-0
+        tw-right-[10%] max-lg:tw-z-0
+        tw-h-[750px]
+        tw-max-w-[450px]
+        max-md:tw-hidden
+        ">
+        <img src="./assets/images/homepage/lawyer.png"
+        alt="law"
+        class="tw-object-cover tw-h-full tw-w-full
+        ">
+        </div>
+      .tw-absolute.tw-flex.tw-flex-col.tw-gap-4.tw-p-2.tw-text-white(class='tw-left-[15%] tw-top-[50%] tw-z-[5] tw-min-w-[320px] tw-max-w-[500px] tw-translate-y-[-50%] max-md:tw-left-[50%] max-md:tw-translate-x-[-50%] max-md:tw-place-content-center max-md:tw-place-items-center')
+        h1.khula-font.tw-text-xl.tw-font-semibold(class='max-md:tw-text-center max-md:tw-text-base')
+          | Real estate . Property investment . Rentals
+        h2.khula-font.tw-text-6xl.tw-font-bold.tw-uppercase(class='max-md:tw-text-4xl')
+          | Brick property investment
+          // <br class="max-md:tw-hidden">
+        span.tw-mt-2.tw-w-full.tw-text-justify.tw-text-lg(class='max-md:tw-text-base')
+          | Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
+          | dolores sapiente, ipsa delectus ut consequuntur molestias
+          | earum libero aut quasi?
+        .tw-mt-3.tw-flex.tw-w-full(class='tw-gap-[2%] max-md:tw-flex-col max-md:tw-gap-4')
+          a.tw-flex.tw-place-content-center.tw-place-items-center.tw-gap-2.tw-bg-white.tw-p-3.tw-text-black.tw-transition-colors(href='', target='_blank', rel='noreferrer', class='tw-max-h-[50px] tw-min-w-[180px] tw-px-[20px] tw-duration-[0.3s] hover:tw-bg-[#100f0f] hover:tw-text-[#fff] max-md:tw-min-w-[100px]')
+            span Watch video
+            i.bi.bi-camera-video-fill
+          a.tw-flex.tw-w-full.tw-place-content-center.tw-place-items-center.tw-gap-2.tw-p-3.tw-transition-transform(href='#booking', class='tw-bg-[#000] tw-text-[#fff] tw-duration-[0.3s] hover:tw-translate-x-1')
+            span Contact us
+            i.bi.bi-telephone-fill
+    section.tw-flex.tw-w-full.tw-place-content-center.tw-place-items-center.tw-p-4(class='tw-min-h-[60vh] tw-gap-[10%] tw-bg-[#fff] tw-px-[20%] max-lg:tw-flex-col max-lg:tw-gap-[4%] max-lg:tw-px-[5%]')
+      .tw-flex.tw-overflow-hidden.tw-rounded-md(class='tw-h-[350px] tw-w-[350px] max-md:tw-mt-[5%] max-md:tw-h-[300px] max-md:tw-w-[300px]')
+        img.tw-w-full.tw-object-cover(src='./assets/images/homepage/top-view.jpg', alt='')
+      .tw-flex.tw-h-full.tw-flex-col(class='tw-gap-[5%] max-lg:tw-mt-4 max-lg:tw-gap-[3%] max-lg:tw-text-center')
+        h2.primary-text-color.tw-text-5xl.tw-font-medium.tw-uppercase(class='max-md:tw-text-3xl')
+          | Brick property
+        .tw-mt-6.tw-text-justify(class='tw-max-w-[450px]')
+          | Welcome to Brick Property Investment, your premier
+          | destination for all things real estate, property investment,
+          | and rentals. Our dedicated team offers expert guidance and
+          | personalized solutions to help you navigate the intricate
+          | world of property investment. Whether you&apos;re looking to
+          | diversify your portfolio, find your dream home, or secure
+          | lucrative rental opportunities, trust Brick to deliver
+          | tailored strategies that meet your unique needs. Experience
+          | the difference with Brick Property Investment and unlock the
+          | full potential of your real estate ventures.
+      div
+    section.tw-flex.tw-w-full.tw-flex-col.tw-place-items-center.tw-p-8(class='tw-min-h-[60vh] tw-gap-[10%] tw-bg-[#000] tw-px-[20%] max-md:tw-h-max max-md:tw-min-h-[unset] max-md:tw-gap-[4%] max-md:tw-px-[5%]')
+      h2.tw-text-4xl.tw-font-semibold.tw-text-white(class='max-md:tw-text-2xl')
+        | Discover properties
+      // <h2 class="tw-text-5xl max-md:tw-text-3xl primary-text-color tw-text-center"></h2>
+      .tw-flex.tw-w-full.tw-place-content-center.tw-place-items-center.tw-justify-around(class='tw-mt-[5%] tw-gap-[10%] max-lg:tw-mt-4 max-lg:tw-flex-col max-lg:tw-gap-5 max-md:tw-mt-8')
+        .tw-flex.tw-w-full.tw-flex-wrap.tw-justify-around.tw-gap-3.tw-rounded-sm.tw-border-2.tw-border-solid.tw-p-2(class='tw-border-[#cccbcba0]')
+          input.input-light(type='text', placeholder='City, area or street name', id='')
+          .tw-flex.tw-flex-col.tw-gap-1(class='tw-w-[200px]')
+            #dropdown1.dropdown.input-light
+              button.dropdown-toggle.tw-flex.tw-gap-5
+                span Home type
+                i.bi.bi-chevron-down.tw-ml-auto
+              ul.dropdown-menu
+                li House
+                li Condo
+                li Townhome
+                li Apartment
+                li Commercial
+          .tw-flex.tw-flex-col.tw-gap-1(class='tw-w-[200px]')
+            #dropdown2.dropdown.input-light
+              button.dropdown-toggle.tw-flex.tw-gap-5
+                span Bedrooms
+                i.bi.bi-chevron-down.tw-ml-auto
+              ul.dropdown-menu
+                li Any
+                li 1
+                li 2
+                li 3
+                li 4+
+          .tw-flex.tw-flex-col.tw-gap-1(class='tw-w-[200px]')
+            #dropdown3.dropdown.input-light
+              button.dropdown-toggle.tw-flex.tw-gap-5
+                span Bathrooms
+                i.bi.bi-chevron-down.tw-ml-auto
+              ul.dropdown-menu
+                li Any
+                li 1
+                li 2
+                li 3
+                li 4+
+          .tw-flex.tw-flex-col.tw-gap-1(class='tw-w-[200px]')
+            #dropdown4.dropdown.input-light
+              button.dropdown-toggle.tw-flex.tw-gap-5
+                span Min price
+                i.bi.bi-chevron-down.tw-ml-auto
+              ul.dropdown-menu
+                li Any
+                li $50,000
+                li $100,000
+                li $200,000
+                li $200,000
+      .tw-flex.tw-w-full.tw-flex-wrap.tw-place-content-center.tw-place-items-center.tw-justify-around.tw-gap-8(class='tw-mt-[5%] max-lg:tw-mt-4 max-lg:tw-flex-col max-lg:tw-gap-5 max-md:tw-mt-8')
+        a.tw-flex.tw-cursor-pointer.tw-flex-col.tw-place-items-center.tw-gap-4.tw-overflow-hidden.tw-text-black.tw-shadow-lg(class='tw-h-[350px] tw-w-[350px] tw-bg-[#fff]', target='_blank', rel='noreferrer', href='')
+          .tw-relative.tw-w-full.tw-bg-white(class='tw-h-[280px]')
+            img.tw-h-full.tw-w-full.tw-object-cover(src='./assets/images/homepage/property.jpg', alt='')
+            .tw-flex.tw-flex-col.tw-gap-1.tw-p-4.tw-text-center
+              h3.tw-text-lg.tw-font-semibold Rental
+              h4.tw-text-sm(class='tw-text-[#595858]')
+                | $2000 PM
+        a.tw-flex.tw-cursor-pointer.tw-flex-col.tw-place-items-center.tw-gap-4.tw-overflow-hidden.tw-text-black.tw-shadow-lg(class='tw-h-[350px] tw-w-[350px] tw-bg-[#fff]', target='_blank', rel='noreferrer', href='')
+          .tw-relative.tw-w-full.tw-bg-white(class='tw-h-[280px]')
+            img.tw-h-full.tw-w-full.tw-object-cover(src='./assets/images/homepage/apartment.jpg', alt='')
+            .tw-flex.tw-flex-col.tw-gap-1.tw-p-4.tw-text-center
+              h3.tw-text-lg.tw-font-semibold
+                | Apartment Sale
+              h4.tw-text-sm(class='tw-text-[#595858]')
+                | $250,000
+        a.tw-flex.tw-cursor-pointer.tw-flex-col.tw-place-items-center.tw-gap-4.tw-overflow-hidden.tw-text-black.tw-shadow-lg(class='tw-h-[350px] tw-w-[350px] tw-bg-[#fff]', target='_blank', rel='noreferrer', href='')
+          .tw-relative.tw-w-full.tw-bg-white(class='tw-h-[280px]')
+            img.tw-h-full.tw-w-full.tw-object-cover(src='./assets/images/homepage/house.jpg', alt='')
+            .tw-flex.tw-flex-col.tw-gap-1.tw-p-4.tw-text-center
+              h3.tw-text-lg.tw-font-semibold
+                | Home Sale
+              h4.tw-text-sm(class='tw-text-[#595858]')
+                | $750,000
+      a.tw-flex.tw-gap-2.tw-p-3.tw-transition-transform(href='', target='_blank', rel='noreferrer', class='tw-mt-[5%] tw-bg-[#fff] tw-px-[20px] tw-text-[#181a18fd] tw-duration-[0.3s] hover:tw-translate-x-1 max-md:tw-p-2')
+        span Explore more
+        i.bi.bi-arrow-right
+    section#booking.tw-flex.tw-w-full.tw-place-content-center.tw-place-items-center.tw-overflow-hidden.tw-p-4(class='tw-gap-[10%] tw-bg-[#EFEFEF] max-md:tw-flex-col max-md:tw-px-2 lg:tw-px-[10%]')
+      .tw-flex.tw-overflow-hidden(class='tw-h-[350px] tw-w-[350px] max-md:tw-hidden')
+        img.tw-w-full.tw-object-cover(src='./assets/images/homepage/top-view.jpg', alt='')
+      .tw-flex.tw-h-full.tw-flex-col(class='tw-mt-[5%] tw-gap-[5%]')
+        .tw-flex.tw-flex-col.tw-gap-2(class='mxa-md:tw-text-center')
+          h2.tw-text-3xl.tw-font-medium(class='max-md:tw-text-xl')
+            | Get free quote
+          h2.primary-text-color.tw-text-5xl.tw-font-medium(class='max-md:tw-text-3xl')
+            | Contact us
+        form.tw-mt-4.tw-flex.tw-flex-col.tw-place-content-center.tw-gap-3.tw-p-2(class='tw-max-w-[450px] max-md:tw-max-w-[350px]')
+          .tw-flex.tw-flex-col.tw-gap-4(class='tw-w-[450px] max-md:tw-w-[340px]')
+            .tw-flex.tw-flex-col.tw-gap-1
+              .tw-text-gray-500 Name
+              input.input(type='text', maxlength='10', required='', placeholder='name')
+            .tw-flex.tw-flex-col.tw-gap-1
+              .tw-text-gray-500 Phone
+              input.input(type='text', required='', placeholder='phone')
+            .tw-flex.tw-flex-col.tw-gap-1
+              .tw-text-gray-500 Email
+              input#email.input(type='email', required='', placeholder='email')
+            .tw-flex.tw-w-full.tw-flex-col.tw-gap-2
+              .tw-text-gray-500 Enquiry
+              textarea.input.tw-w-full.tw-resize-y(class='tw-max-h-[250px] tw-min-h-[40px]', placeholder='enquiry')
+          button.btn.tw-ml-auto.tw-mt-5.tw-transition-transform(type='submit', class='tw-duration-[0.3s] hover:tw-translate-x-2')
+            span Submit
+            i.bi.bi-arrow-right
+        .tw-mt-4.tw-flex.tw-flex-col.tw-gap-2.tw-text-center
+          h3.tw-text-xl Call
+          .primary-text-color.tw-text-3xl
+            | +61 123-123-123
+    section.tw-mt-5.tw-flex.tw-w-full.tw-flex-col.tw-place-items-center(class='tw-p-[5%]')
+      h3.primary-text-color.tw-text-3xl.tw-font-medium(class='max-md:tw-text-2xl')
+        | What some of our clients say
+      .tw-flex.tw-w-full.tw-place-content-center(class='tw-mt-[5%] tw-gap-[5%]')
+        .review-container.tw-flex.tw-flex-col
+          .tw-flex(class='tw-h-[150px] tw-max-w-[550px] max-md:tw-h-[150px]')
+            .slides.fade.tw-text-justify.tw-text-lg
+              q.tw-italic.tw-text-gray-600
+                | One of the best property management around.
+                | Absolutely recommended!!
+              .tw-mt-2.tw-text-yellow-400
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+              p.tw-mt-3 - Rob Wilson
+            .slides.fade.tw-text-justify.tw-text-lg
+              q.tw-italic.tw-text-gray-600
+                | Amazing, got the contract ready very quickly and
+                | was able to move in on time.
+              .tw-mt-2.tw-text-yellow-400
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+              p.tw-mt-3 - Tania
+            .slides.fade.tw-text-justify.tw-text-lg
+              q.tw-italic.tw-text-gray-600
+                | Very happy with how they handled and managed
+                | property
+              .tw-mt-2.tw-text-yellow-400
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+              p.tw-mt-3 - Nick Surace
+          // Navigation dots
+          .dots-container.tw-mt-auto
+            span.dot
+            span.dot
+            span.dot
+      .tw-flex.tw-w-full.tw-flex-col.tw-place-content-center.tw-place-items-center.tw-gap-5(class='tw-mt-[5%]')
+        h2.primary-text-color.tw-text-3xl On the map
+        iframe.(src='https://www.google.com/maps/embed', class='tw-h-[350px] tw-w-[600px] max-md:tw-w-full', style='border: 0', allowfullscreen='', loading='lazy', referrerpolicy='no-referrer-when-downgrade')
+    section.tw-flex.tw-w-full.tw-flex-col.tw-place-content-center.tw-place-items-center(class='tw-gap-[10%] tw-bg-[#EFEFEF] tw-p-[5%] tw-px-[10%]')
+      .tw-flex.tw-w-full.tw-flex-col.tw-place-content-center.tw-place-items-center.tw-gap-3
+        h2.primary-text-color.tw-text-3xl(class='max-md:tw-text-xl')
+          | Special Newsletter signup
+        h2.tw-text-xl(class='max-md:tw-text-lg')
+          | Be the first to know about upcoming properties
+        .input.tw-flex.tw-place-items-center.tw-overflow-hidden.tw-bg-white.tw-p-2(class='tw-h-[50px]')
+          input.tw-h-full.tw-w-full.tw-bg-transparent.tw-px-3.tw-outline-none(type='email', placeholder='email')
+          button.btn.tw-transition-colors(class='tw-h-[35px] tw-duration-[0.3s]')
+            | Signup
+    footer.tw-flex.tw-w-full.tw-place-content-around.tw-gap-3.tw-text-white(class='tw-bg-[#000] tw-p-[5%] tw-px-[10%] max-lg:tw-flex-col')
+      .tw-flex.tw-h-full.tw-flex-col.tw-place-items-center.tw-gap-6(class='tw-w-[250px] max-md:tw-w-full')
+        img.(src='./assets/logo.png', alt='logo', srcset='', class='tw-max-h-[100px] tw-max-w-[100px]')
+        h2.tw-text-xl Brick property
+        div
+          | unit 17/4 station Street,
+          br
+                            Fairfield,
+          br
+                            Sydney,
+          br
+                            Australia
+        .tw-mt-3.tw-text-lg.tw-font-semibold Follow us
+        .tw-flex.tw-gap-4.tw-text-2xl
+          a(href='', aria-label='Facebook')
+            i.bi.bi-facebook
+          a(href='https://twitter.com/pauls_freeman', aria-label='Twitter')
+            i.bi.bi-twitter
+          a(href='https://twitter.com/pauls_freeman', aria-label='Twitter')
+            i.bi.bi-linkedin
+      .tw-flex.tw-h-full.tw-flex-col.tw-gap-4(class='tw-w-[250px]')
+        h2.tw-text-3xl(class='max-md:tw-text-xl') Services
+        .tw-flex.tw-flex-col.tw-gap-3(class='max-md:tw-text-sm')
+          a.footer-link(href='') Properties
+          a.footer-link(href='') Home worth estimate 
+          a.footer-link(href='') Buyer&apos;s consult
+          a.footer-link(href='') Listing
+      .tw-flex.tw-h-full.tw-flex-col.tw-gap-4(class='tw-w-[250px]')
+        h2.tw-text-3xl(class='max-md:tw-text-xl') Resources
+        .tw-flex.tw-flex-col.tw-gap-3(class='max-md:tw-text-sm')
+          a.footer-link(href='') About us
+          a.footer-link(href='') FAQ
+          a.footer-link(href='') Contact Us
+          a.footer-link(href='') Locations
+          a.footer-link(href='') Privacy policy
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js', integrity='sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==', crossorigin='anonymous', referrerpolicy='no-referrer')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js', integrity='sha512-5efjkDjhldlK+BrHauVYJpbjKrtNemLZksZWxd6Wdxvm06dceqWGLLNjZywOkvW7BF032ktHRMUOarbK9d60bg==', crossorigin='anonymous', referrerpolicy='no-referrer')
+    script(src='./scripts/utils.js')
+    script(src='index.js')
